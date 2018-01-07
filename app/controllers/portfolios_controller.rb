@@ -36,8 +36,8 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
+  # PATCH/PUT /portfolios/1
+  # PATCH/PUT /portfolios/1.json
   def update
     @portfolio_item = Portfolio.find(params[:id])
 
@@ -49,6 +49,17 @@ class PortfoliosController < ApplicationController
         format.html { render :edit }
         format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /portfolios/1
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolios was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 end
