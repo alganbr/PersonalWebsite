@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  access all: [:index, :show], user: : {except: [:destroy, :new, :create, :update, :edit] }, admin: :all
 
   # GET /blogs
   def index
@@ -44,6 +44,16 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     redirect_to blogs_url, notice: 'Blog was successfully destroyed.'
+  end
+
+  # GET /blogs/1/toggle_status
+  def toggle_status
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+      @blog.draft!
+    end
+    redirect_to blogs_url, notice: 'Blog post status was successfuly updated.'
   end
 
   private
