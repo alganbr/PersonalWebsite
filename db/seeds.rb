@@ -11,5 +11,5 @@ User.create!(
   email: "algan_br@hotmail.com", 
   password: "rustinya",
   password_confirmation: "rustinya",
-  admin: true
+  roles: "admin"
 )

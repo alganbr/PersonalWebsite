@@ -33,7 +33,7 @@ RailsAdmin.config do |config|
 
   # Authorization
   config.authorize_with do
-    redirect_to main_app.root_path unless current_user.admin == true
+    redirect_to main_app.root_path unless current_user.has_role?(:admin)
   end
 
   config.actions do
