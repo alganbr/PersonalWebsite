@@ -1,17 +1,23 @@
 <h1>Contact</h1>
 
-<FlatButton style={styles.button} linkButton={true} target='_self' href={emailAddy} label='Email'>
-  <FontIcon style={styles.buttonIcon} className='material-icons' hoverColor='#ddd'>email</FontIcon>
-</FlatButton>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Email</h4>
 
-<FlatButton style={styles.button} linkButton={true} target='_blank' href={resumeLink} label='Resume'>
-  <FontIcon style={styles.buttonIcon} className='material-icons' hoverColor='#ddd'>description</FontIcon>
-</FlatButton>
+    <p><a href="mailto:algan_br@hotmail.com?subject=PortfolioContact" "email me"><%= fa_icon "envelope" %> algan_br@hotmail.com</a> </p>
 
-<FlatButton style={styles.button} linkButton={true} target='_blank' href={githubLink} label='Github'>
-  <FontIcon style={styles.buttonIconFA} className='fa fa-github' hoverColor='#ddd'></FontIcon>
-</FlatButton>
+    <h4>Phone</h4>
 
-<FlatButton style={styles.button} linkButton={true} target='_blank' href={linkedin} label='Linkedin'>
-  <FontIcon style={styles.buttonIconFA} className='fa fa-linkedin-square' hoverColor='#ddd'></FontIcon>
-</FlatButton>
+    <p><%= fa_icon "phone" %> <%= number_to_phone "2064668415" %></p>
+
+  </div>
+
+  <div class="col-md-6">
+    <h4>Elsewhere</h4>
+    <ol class="list-unstyled social-links">
+      <li><a href="https://github.com/alganbr" target="_blank"><%= fa_icon "github" %> GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/algan-rustinya-237582b9" target="_blank"><%= fa_icon "linkedin" %> LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/alganrustinya" target="_blank"><%= fa_icon "facebook" %> Facebook</a></li>
+    </ol>
+  </div>
+</div>

@@ -1,8 +1,20 @@
-<%= image_tag @project.main_image %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @project.main_image %>
+    </div>
 
-<h1><%= @project.title %></h1>
-<em><%= @project.subtitle %></em>
-<p><%= @project.body %></p>
+    <div class="col-md-5">
+      <h1><%= @project.title %></h1>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+      <hr>
+
+      <em><%= @project.subtitle %></em>
+
+      <p><%= @project.body %></p>
+
+      <hr>
+      
+    </div>
+  </div>
+</div>

@@ -11,19 +11,12 @@
   </head>
 
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
+    <%= render 'shared/project_nav' %>
+    <%= render 'shared/project_masthead' unless logged_in?(:site_admin) %>
 
-          <%= render "shared/application_nav" %>
+    <%= yield %>
 
-          <%= yield %>
-
-          <%= render "shared/application_footer" %>
-
-        </div>
-      </div>
-    </div>
+    <%= render 'shared/project_footer' %>
   </body>
 
 </html>

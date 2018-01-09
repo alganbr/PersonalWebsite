@@ -1,17 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Projects</h1>
-
-<%= link_to 'Create New Project', new_project_path %>
-
-<br>
-
-<% @projects.each do |project| %>
-    <h2><%= link_to project.title, project %></h2>
-    <em><%= project.subtitle %></em>
-    <p><%= project.body %></p>
-    <p><%= image_tag project.thumb_image %></p>
-    <%= link_to 'Edit', edit_project_path(project) %>
-    <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <hr>
-<% end %>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <%= render partial: 'project', collection: @projects %>
+    </div>
+  </div>
+</div>

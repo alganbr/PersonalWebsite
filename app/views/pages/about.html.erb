@@ -1,8 +1,13 @@
 <div class="row">
-  <div class="col-md-3">
-    <%= image_tag("profilepic.jpg", size: "300x300", alt: "Algan Rustinya", class: "rounded-circle") %>
+  <div class="col-md-4">
+    <p>
+      <%= image_tag("profilepic.jpg", alt: "Algan Rustinya", class: "img-fluid rounded-circle") %>
+    </p>
+    <br>
+    <p>
+      <%= link_to "My Resume", "https://drive.google.com/open?id=0B4MP_OdsGL8GbF9kME1XVXlreUE", class: "btn btn-lg btn-secondary", target: :_blank %>
+    </p>
   </div>
-  <div class="col-md-1"></div>
   <div class="col-md-8 text-center">
     <h1>About Me</h1>
       I graduated from UCLA with a Bachelor's degree in Computer Science. During my undergraduate, I got the opportunity to learn different areas of computer science which gave me a solid background in programming. I am particularly interested in data mining and machine learning, and would like to explore more in this area. 
