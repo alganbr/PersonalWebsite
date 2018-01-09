@@ -1,0 +1,8 @@
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">Algan's Blog</h1>
+    <p class="lead blog-description">Put your blog out into the world and hope that your talent will speak for itself. 
+    </p>
+    <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:admin) %>
+  </div>
+</div>

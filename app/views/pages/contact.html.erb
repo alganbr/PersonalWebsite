@@ -1,2 +1,17 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<h1>Contact</h1>
+
+<FlatButton style={styles.button} linkButton={true} target='_self' href={emailAddy} label='Email'>
+  <FontIcon style={styles.buttonIcon} className='material-icons' hoverColor='#ddd'>email</FontIcon>
+</FlatButton>
+
+<FlatButton style={styles.button} linkButton={true} target='_blank' href={resumeLink} label='Resume'>
+  <FontIcon style={styles.buttonIcon} className='material-icons' hoverColor='#ddd'>description</FontIcon>
+</FlatButton>
+
+<FlatButton style={styles.button} linkButton={true} target='_blank' href={githubLink} label='Github'>
+  <FontIcon style={styles.buttonIconFA} className='fa fa-github' hoverColor='#ddd'></FontIcon>
+</FlatButton>
+
+<FlatButton style={styles.button} linkButton={true} target='_blank' href={linkedin} label='Linkedin'>
+  <FontIcon style={styles.buttonIconFA} className='fa fa-linkedin-square' hoverColor='#ddd'></FontIcon>
+</FlatButton>

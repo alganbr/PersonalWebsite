@@ -6,23 +6,26 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content=<%= @seo_keywords %>/>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
 
-          <%= render "shared/application_nav" %>
+    <%= render 'shared/blog_nav' %>
+    <%= render 'shared/blog_masthead' %>
 
-          <%= yield %>
+    <div class="container">
 
-          <%= render "shared/application_footer" %>
+      <div class="row">
 
-        </div>
+        <%= yield %>
+
+        <%= render 'shared/blog_sidebar' %>
       </div>
+
+      <%= render 'shared/blog_footer' %>
+      
     </div>
   </body>
 

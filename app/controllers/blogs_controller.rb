@@ -1,10 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit] }, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, admin: :all
+  layout "blog"
 
   # GET /blogs
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
   end
 
   # GET /blogs/1
