@@ -72,4 +72,9 @@ gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.1'
 # Admin panel
 gem 'rails_admin', '~> 1.2'
 
+# Handling images
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'mini_magick', '~> 4.8'
+
 

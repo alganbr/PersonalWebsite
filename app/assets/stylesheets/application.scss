@@ -35,7 +35,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 body {
   color: #fff;
@@ -45,6 +44,7 @@ body {
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
+  padding: 0 2rem;
   display: table;
   width: 100%;
   height: 100%; /* For at least Firefox */
@@ -82,14 +82,14 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.85);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(255,255,255,.5);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -129,7 +129,7 @@ body {
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.85);
 }
 
 
@@ -137,7 +137,19 @@ body {
  * Affix and center
  */
 
-@media (min-width: 40em) {
+@media (min-width: 30em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 50rem;
+  }
+
+  .rounded-circle {
+    padding: 0 auto;
+  }
+}
+
+@media (min-width: 50em) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -155,7 +167,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 50rem; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
@@ -226,3 +238,30 @@ body {
   list-style: square;
 }
 
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('home_bg.png') no-repeat;
+  background-size: cover;
+}
+
+#video-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
