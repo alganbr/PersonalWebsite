@@ -133,24 +133,28 @@ body {
   color: rgba(255,255,255,.85);
 }
 
-
 /*
  * Affix and center
  */
-
-@media (min-width: 30em) {
-  .masthead,
-  .mastfoot,
+@media(min-width: 20em) {
   .cover-container {
-    width: 50rem;
-  }
-
-  .rounded-circle {
-    padding: 0 auto;
+    width: 20rem; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
-@media (min-width: 50em) {
+@media(min-width: 28em) {
+  .cover-container {
+    width: 25rem; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media(min-width: 35em) {
+  .cover-container {
+    width: 35rem; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 48em) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -177,6 +181,15 @@ body {
   .mastfoot,
   .cover-container {
     width: 55rem;
+  }
+}
+
+/*
+ * For small screen
+ */
+@media (max-width: 62em) {
+  img {
+    width: 20rem;
   }
 }
 
