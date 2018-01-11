@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
@@ -74,4 +75,8 @@ footer p {
 .nav-link:focus {
   color: #fff;
   background-color: transparent;
+}
+
+.social-links li {
+  font-size: 1.25em;
 }
