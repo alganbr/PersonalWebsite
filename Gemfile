@@ -80,4 +80,6 @@ gem 'mini_magick', '~> 4.8'
 # Nested form
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 
-
+# Markdown and syntax
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'
