@@ -63,3 +63,15 @@ footer p {
 .project-container {
   padding: 3rem;
 }
+
+/* Nav links */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: transparent;
+}
