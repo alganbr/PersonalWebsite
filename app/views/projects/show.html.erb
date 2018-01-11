@@ -1,7 +1,10 @@
 <div class="container project-container">
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 text-center">
       <%= image_tag @project.main_image %>
+      <% if @project.url and not @project.url.empty? %>
+        <%= link_to 'Visit', @project.url, target: "_blank", class: 'btn btn-lg btn-info visit-button' %>
+      <% end %>
     </div>
 
     <div class="col-md-5">

@@ -72,6 +72,7 @@ class ProjectsController < ApplicationController
                                       :body, 
                                       :main_image, 
                                       :thumb_image, 
+                                      :url,
                                       technologies_attributes: [:id, :name, :_destroy])
     end
 end

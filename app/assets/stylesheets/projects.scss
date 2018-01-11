@@ -43,11 +43,21 @@ body {
 }
 
 .card > img {
+  width: 350px;
   margin-bottom: .75rem;
 }
 
+.card-title {
+  margin-top: .5rem;
+}
+
+.card-title a {
+  color: #372f32;
+  text-decoration: none;
+}
+
 .card-text {
-  font-size: 85%;
+  font-size: 90%;
 }
 
 footer {
@@ -60,6 +70,9 @@ footer p {
 }
 
 /* Custom styles */
+img {
+  width: 100%;
+}
 
 .project-container {
   padding: 3rem;
@@ -81,9 +94,9 @@ footer p {
   font-size: 1.25em;
 }
 
-/* Custom style */
-img {
-  width: 100%;
+.visit-button{
+  margin: 1rem;
+  display: inline-block;
 }
 
 #error_explanation {
