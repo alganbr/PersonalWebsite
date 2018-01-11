@@ -5,7 +5,11 @@ class BlogsController < ApplicationController
 
   # GET /blogs
   def index
-    @blogs = Blog.page(params[:page]).per(5).order('created_at DESC')
+    if logged_in?(:admin)
+      @blogs = Blog.page(params[:page]).per(5).order('created_at DESC')
+    else
+      @blogs = Blog.published.page(params[:page]).per(5).order('created_at DESC')
+    end
   end
 
   # GET /blogs/1
