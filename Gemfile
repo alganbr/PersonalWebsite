@@ -80,4 +80,7 @@ gem 'mini_magick', '~> 4.8'
 # Nested form
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 
+# Database
+gem 'redis', '~> 4.0', '>= 4.0.1'
+
 
