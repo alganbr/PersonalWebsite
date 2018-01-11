@@ -15,6 +15,12 @@
 
       <hr>
 
+      <h3>Technologies Used:</h3>
+
+      <p>
+      <%= @project.technologies.map{|p| p.name}.join(", ") %>.
+      </p>
+
       <%= link_to 'Edit |', edit_project_path(@project) if logged_in?(:admin) %>
       <%= link_to 'Back', projects_path %>
       
