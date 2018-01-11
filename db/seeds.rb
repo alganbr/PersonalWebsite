@@ -55,7 +55,7 @@ Project.create!(
 Project.create!(
   title: "Pinpoint",
   subtitle: "IOS application/raspberry pi",
-  body: "Supervised learning is a type of learning using a pre-labelled data. However, labeling a huge amount of data can be very difficult and time consuming. The Labeling System is a project developed under UC Institute for Prediction and Technology with the aim to ease the labeling process of huge data. The labeling process will be dealt in the form of surveys send to multiple coders who will label the data. Technologies: Python, Django, PostgreSQL, JQuery",
+  body: "Pinpoint is a personal tracker device which can be connected and controlled through mobile application. The device is developed using Raspberry Pi attached with GPS locator, speaker, and bluetooth connection. The mobile application is developed in native IOS using Swift with Python backend and Firebase database. Once connected, the device is trackable in realtime and will be displayed in the map.",
   main_image: Rails.root.join("app/assets/images/pinpoint.jpg").open,
   thumb_image: Rails.root.join("app/assets/images/pinpoint.jpg").open,
   position: 3
