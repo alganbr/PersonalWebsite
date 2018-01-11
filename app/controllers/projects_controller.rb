@@ -1,11 +1,20 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, admin: :all
   layout "project"
 
   # GET /projects
   def index
-    @projects = Project.all
+    @projects = Project.all.order('position ASC')
+  end
+
+  # GET /projects/sort
+  def sort
+    params[:order].each do |key, value|
+      Project.find(value[:id]).update(position: value[:position])
+    end
+
+    render body: nil
   end
 
   # GET /projects/1

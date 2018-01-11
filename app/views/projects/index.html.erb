@@ -1,7 +1,7 @@
 <%= render 'shared/project_masthead' %>
 <div class="album text-muted">
   <div class="container">
-    <div class="row">
+    <div class="row <%= 'sortable' if logged_in?(:admin) %>">
       <%= render partial: 'project', collection: @projects %>
     </div>
   </div>
