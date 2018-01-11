@@ -5,6 +5,9 @@ class Project < ApplicationRecord
 
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  mount_uploader :main_image, ProjectUploader
+  mount_uploader :thumb_image, ProjectUploader
+
   after_initialize :set_defaults
   def set_defaults
     self.main_image ||= PlaceHolder.image_generator(height: '600', width: '400')

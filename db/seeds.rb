@@ -22,12 +22,41 @@ User.create!(
   )
 end
 
-# Create 9 Projects
-9.times do |project|
-  Project.create!(
-    title: "Project title #{project + 1}",
-    subtitle: "My great service",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    position: project
-  )
-end
+# Create projects
+Project.create!(
+  title: "Propose",
+  subtitle: "web application",
+  body: "As the software world expands, there will always be people who need software to be written, and people willing to write that software in return for money. Propose is a web application that aims to connect people in a marketplace where clients can propose a coding projects and engage freelancers to work on them. Front-end technologies: React.js, Ajax, JQuery, Back-end technologies: Python, Django REST framework, PostgreSQL, Supporting tools: Vagrant, Webpack',
+      url: 'https://github.com/alganbr/propose",
+  main_image: Rails.root.join("app/assets/images/propose.png").open,
+  thumb_image: Rails.root.join("app/assets/images/propose.png").open,
+  position: 0
+)
+
+Project.create!(
+  title: "Stock Market Prediction",
+  subtitle: "machine learning",
+  body: "In this project, we apply sentiment analysis and data mining principles to find the correlation between public sentiment and stock market movements. We use StockTwits data, a labeled Twitter data related to stock market trend, to do a supervised learning and develop a mathematical model to predict the sentiment of the unlabelled Twitter data. Using the predicted sentiment of the unlabelled Twitter data, we are going to predict the short term trend of the stock market, whether it is going to be bullish or bearish. Technologies: Python3, Numpy, Sklearn, NLTK, Twitter APIs, StockTwits APIs.',
+      url: 'https://github.com/alganbr/cs145",
+  main_image: Rails.root.join("app/assets/images/stock_market_prediction.jpg").open,
+  thumb_image: Rails.root.join("app/assets/images/stock_market_prediction.jpg").open,
+  position: 1
+)
+
+Project.create!(
+  title: "Labeling System",
+  subtitle: "web application",
+  body: "Supervised learning is a type of learning using a pre-labelled data. However, labeling a huge amount of data can be very difficult and time consuming. The Labeling System is a project developed under UC Institute for Prediction and Technology with the aim to ease the labeling process of huge data. The labeling process will be dealt in the form of surveys send to multiple coders who will label the data. Technologies: Python, Django, PostgreSQL, JQuery",
+  main_image: Rails.root.join("app/assets/images/labelingsystem.png").open,
+  thumb_image: Rails.root.join("app/assets/images/labelingsystem.png").open,
+  position: 2
+)
+
+Project.create!(
+  title: "Pinpoint",
+  subtitle: "IOS application/raspberry pi",
+  body: "Supervised learning is a type of learning using a pre-labelled data. However, labeling a huge amount of data can be very difficult and time consuming. The Labeling System is a project developed under UC Institute for Prediction and Technology with the aim to ease the labeling process of huge data. The labeling process will be dealt in the form of surveys send to multiple coders who will label the data. Technologies: Python, Django, PostgreSQL, JQuery",
+  main_image: Rails.root.join("app/assets/images/pinpoint.jpg").open,
+  thumb_image: Rails.root.join("app/assets/images/pinpoint.jpg").open,
+  position: 3
+)
