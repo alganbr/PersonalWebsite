@@ -8,6 +8,7 @@
 
 # Create Admin User
 User.create!(
+  name: "Algan Rustinya",
   email: "algan_br@hotmail.com", 
   password: "rustinya",
   password_confirmation: "rustinya",

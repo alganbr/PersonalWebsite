@@ -173,6 +173,8 @@ body {
   .mastfoot,
   .cover-container {
     width: 50rem; /* Must be percentage or pixels for horizontal alignment */
+    max-height: 35rem;
+    overflow-y: auto;
   }
 }
 
