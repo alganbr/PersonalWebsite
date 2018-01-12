@@ -1,34 +1,11 @@
 <div class="inner cover">
   <h1 class="cover-heading">Welcome</h1>
-  <p class="lead" id="type-writer">My name is Algan! You can learn more about me.</p>
+  <p class="lead">
+    <span class="type-writer"></span>
+  </p>
   <p class="lead" id="about-me-button">
     <%= link_to "Learn More", about_me_path, class: "btn btn-lg btn-secondary" %>
   </p>
 </div>
-
-<script>
-  var i = 0;
-  var txt = 'My name is Algan! You can learn more about me.';
-  var speed = 50;
-  var erase = true;
-
-  window.onload = function typeWriter() {
-    if (erase) {
-      document.getElementById("type-writer").innerHTML = ""
-      document.getElementById("about-me-button").style.visibility = 'hidden';
-      erase = false;
-    }
-
-    if (i < txt.length) {
-      document.getElementById("type-writer").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-
-    if(i === txt.length) {
-      document.getElementById("about-me-button").style.visibility = 'visible';
-    }
-  }
-</script>
 
 
