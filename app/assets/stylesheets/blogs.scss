@@ -9,6 +9,10 @@
   html {
     font-size: 15px;
   }
+
+  #navbarHeader {
+    display: none;
+  }
 }
 
 body {
@@ -102,7 +106,6 @@ h6, .h6 {
     font-size: 3.5rem;
   }
 }
-
 
 /*
  * Main column and sidebar layout

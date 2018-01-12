@@ -9,6 +9,10 @@
   html {
     font-size: 15px;
   }
+
+  #navbarHeader {
+    display: none;
+  }
 }
 
 /* Links */
@@ -287,6 +291,10 @@ body {
   .cover {
     height: auto;
     margin: 12rem 0;
+  }
+
+  .site-wrapper {
+    padding: 0;
   }
 }
 @media (max-width: 62em) {
