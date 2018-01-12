@@ -137,24 +137,6 @@ body {
 /*
  * Affix and center
  */
-@media(min-width: 20em) {
-  .cover-container {
-    width: 20rem; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media(min-width: 28em) {
-  .cover-container {
-    width: 25rem; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media(min-width: 35em) {
-  .cover-container {
-    width: 35rem; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
 @media (min-width: 48em) {
   /* Pull out the header and footer */
   .masthead {
