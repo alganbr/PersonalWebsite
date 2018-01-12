@@ -1,9 +1,23 @@
-<div class="masthead clearfix">
+<div class="collapse" id="navbarHeader">
+  <div class="container">
+    <div class="row">
+      <ul class="list-unstyled">
+        <%= nav_helper 'nav-link', 'li' %>
+        <%= login_helper('nav-link') %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="masthead clearfix navbar-inverse">
   <div class="inner">
     <h3 class="masthead-brand">Algan Rustinya</h3>
     <nav class="nav nav-masthead">
       <%= nav_helper 'nav-link', '' %>
       <%= login_helper('nav-link') %>
     </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </div>

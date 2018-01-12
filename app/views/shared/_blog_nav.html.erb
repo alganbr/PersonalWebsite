@@ -1,8 +1,23 @@
-<div class="blog-masthead">
+<div class="collapse" id="navbarHeader">
   <div class="container">
-      <nav class="nav blog-nav">
-        <%= nav_helper 'nav-link', 'span' %>
+    <div class="row">
+      <ul class="list-unstyled">
+        <%= nav_helper 'nav-link', 'li' %>
         <%= login_helper('nav-link') %>
-      </nav>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="blog-masthead clearfix navbar-inverse">
+  <div class="container">
+    <h3 class="blog-brand">Algan Rustinya</h3>
+    <nav class="nav blog-nav">
+      <%= nav_helper 'nav-link', 'span' %>
+      <%= login_helper('nav-link') %>
+    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </div>

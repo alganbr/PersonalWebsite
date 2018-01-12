@@ -99,6 +99,11 @@ img {
   display: inline-block;
 }
 
+.navbar-toggler {
+  position: relative;
+  float: right;
+}
+
 #error_explanation {
   width: fill;
   border: 2px solid #c00;

@@ -44,8 +44,6 @@ h6, .h6 {
 .blog-masthead {
   margin-bottom: 3rem;
   background-color: #428bca;
-  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
-          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
 }
 
 /* Nav links */
@@ -171,11 +169,32 @@ h6, .h6 {
 /*
  * Custom styles
  */
-
 .social-links li {
   font-size: 1.5em;
 }
 
+.navbar-toggler {
+  display: none;
+}
+
+#navbarHeader {
+  background-color: #428bca;
+}
+
+.blog-brand {
+  color: #fff;
+  float:left;
+  margin-bottom: 0;
+  padding: .75rem;
+}
+
+.blog-nav {
+  float: right;
+}
+
+/*
+ * Devise error messages
+ */
 #error_explanation {
   width: fill;
   border: 2px solid #c00;
@@ -201,4 +220,39 @@ h6, .h6 {
 #error_explanation ul li {
   color: #c00;
   font-size: 13px;
+}
+
+/*
+ * For small screen
+ */
+@media (max-width: 48em) {
+  .navbar-toggler {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    float: right;
+    margin: 0.5rem;
+  }
+
+  .blog-nav {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+  }
+
+  .nav-link.active:after {
+    position: inherit;
+    bottom: inherit;
+    left: inherit;
+    width: inherit;
+    height: inherit;
+    margin-left: inherit;
+    vertical-align: inherit;
+    content: "";
+    border-right: inherit;
+    border-bottom: inherit;
+    border-left: inherit;
+  }
 }
